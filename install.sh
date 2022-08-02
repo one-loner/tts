@@ -15,6 +15,7 @@ read
 proxychains curl https://check.torproject.org
 echo "Если выдаётся длинный текст ответа, значит proxychains работает."
 echo "Теперь проверим работу gTTS. Нажмите Enter для начала."
+read
 proxychains gtts-cli 'Test for enlgich language' --output en.mp3
 proxychains gtts-cli -l ru 'Тест русского языка' --output ru.mp3
 echo "Нажмите Enter для теста английского языка."
