@@ -16,7 +16,7 @@ proxychains curl https://check.torproject.org
 echo "Если выдаётся длинный текст ответа, значит proxychains работает."
 echo "Теперь проверим работу gTTS. Нажмите Enter для начала."
 read
-proxychains gtts-cli 'Test for enlgich language' --output en.mp3
+proxychains gtts-cli 'Test for enlgish language' --output en.mp3
 proxychains gtts-cli -l ru 'Тест русского языка' --output ru.mp3
 echo "Нажмите Enter для теста английского языка."
 read
@@ -27,7 +27,7 @@ mpv ru.mp3
 rm ru.mp3 en.mp3
 echo "Если вы услышали звуковые дорожки с фразами на английском и русском языках, значит программа успешно установлена."
 echo ""
-read -r -p "Установить программу в /bin для возможности её запуска из любого места через терминал? [Нет] " response
+read -r -p "Установить программу в /bin для возможности её запуска из любого места через терминал? [Yes/No] " response
 case "$response" in
     [yY][eE][sS]|[yY]|[Дд]|[Аа]) 
         sudo cp tgtts.sh /bin/tgtts
